@@ -60,7 +60,7 @@ class Controller(object):
 
     #数据的存储
     def SaveDataToCSV(self):
-        csvfile = file('traffic.csv', 'wb')
+        csvfile = open(file='traffic.csv', mode='wb')
         writer = csv.writer(csvfile)
         writer.writerows(self.alldata)
         csvfile.close()
