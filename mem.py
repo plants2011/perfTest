@@ -27,14 +27,14 @@ class Controller(object):
 
     #数据的存储
     def SaveDataToCSV(self):
-        csvfile = file('meminfo.csv', 'wb')
+        csvfile = open(file='meminfo.csv', mode='wb')
         writer = csv.writer(csvfile)
         writer.writerows(self.alldata)
         csvfile.close()
 
     #读取数据文件
     def readfile(self):
-        mfile = file("meminfo", "r")
+        mfile = open(file="meminfo", mode="r")
         content = mfile.readlines()
         mfile.close()
         return  content

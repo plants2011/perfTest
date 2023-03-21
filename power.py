@@ -43,7 +43,7 @@ class Controller(object):
 
     #数据的存储
     def SaveDataToCSV(self):
-        csvfile = file('meminfo.csv', 'wb')
+        csvfile = open(file='power.csv', mode='wb')
         writer = csv.writer(csvfile)
         writer.writerows(self.alldata)
         csvfile.close()
